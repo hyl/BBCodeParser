@@ -8,6 +8,11 @@ class BBCodeParser
     use ArrayTrait;
 
     public $parsers = [
+        'lessthan' => [
+          'pattern' => '/\<(.*?)\>/s',
+          'replace' => '&lt;$1&gt;',
+          'content' => '$1'
+        ],
         'bold' => [
             'pattern' => '/\[b\](.*?)\[\/b\]/s',
             'replace' => '<strong>$1</strong>',
@@ -126,11 +131,6 @@ class BBCodeParser
         'small' => [
           'pattern' => '/\[small\](.*?)\[\/small\]/s',
           'replace' => '<small>$1</small>',
-          'content' => '$1'
-        ],
-        'lessthan' => [
-          'pattern' => '/\<(.*?)\>/s',
-          'replace' => '&lt;$1&gt;',
           'content' => '$1'
         ]
     ];
