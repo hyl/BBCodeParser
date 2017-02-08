@@ -129,7 +129,7 @@ class BBCodeParser
           'content' => '$1'
         ],
         'lessthan' => [
-          'pattern' => '\<(.*?)\>/s',
+          'pattern' => '/\<(.*?)\>/s',
           'replace' => '&lt;$1&gt;',
           'content' => '$1'
         ]
